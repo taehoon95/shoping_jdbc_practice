@@ -5,9 +5,10 @@ public class product {
 	private String proName;
 	private int proPrice;
 
-	public product() {
-		super();
-		// TODO Auto-generated constructor stub
+	
+
+	public product(String product) {
+		this.product = product;
 	}
 
 	public String getProduct() {

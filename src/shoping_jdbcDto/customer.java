@@ -1,6 +1,8 @@
 package shoping_jdbcDto;
 
+
 public class customer {
+	
 	private String cusNo;
 	private String cusName;
 	private String birth;
@@ -9,6 +11,8 @@ public class customer {
 
 	public customer() {
 	}
+
+	
 
 	public customer(String cusNo) {
 		super();

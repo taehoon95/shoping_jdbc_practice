@@ -12,6 +12,8 @@ import java.util.List;
 import native_jdbc_programing.util.JdbcUtil;
 import shoping_jdbcDao.customerDao;
 import shoping_jdbcDto.customer;
+import shoping_jdbcDto.product;
+import shoping_jdbcDto.sale;
 
 public class customerDaoImpl implements customerDao {
 	private static final customerDaoImpl instance = new customerDaoImpl();
@@ -24,11 +26,10 @@ public class customerDaoImpl implements customerDao {
 
 	private customer getCustomer(ResultSet rs) throws SQLException {
 		String cusNo = rs.getString("cusno");
-		String cusName = rs.getString("cusName");
+		String cusName = rs.getString("cusname");
 		String birth = rs.getString("birth");
 		String callNo = rs.getString("callNo");
 		String gender = rs.getString("gender");
-				
 		return new customer(cusNo, cusName, birth, callNo, gender);
 	}
 	
@@ -76,5 +77,7 @@ public class customerDaoImpl implements customerDao {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

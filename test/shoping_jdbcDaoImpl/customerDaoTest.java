@@ -1,4 +1,4 @@
-package shoping_jdbcDao;
+package shoping_jdbcDaoImpl;
 
 import static org.junit.Assert.fail;
 
@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
+import shoping_jdbcDao.customerDao;
 import shoping_jdbcDaoImpl.customerDaoImpl;
 import shoping_jdbcDto.customer;
 
@@ -19,6 +20,7 @@ public class customerDaoTest {
 		System.out.println();
 	}
 
+	
 	@Test
 	public void testSelectCustomerByAll() {
 		System.out.println("testSelectCustomerByAll");
