@@ -17,7 +17,7 @@ public class sale {
 	}
 
 	public int getSales() {
-		return (int) (product.getProPrice() - saleRate*1.1);
+		return (int) (product.getProPrice()*saleRate*1.1);
 	}
 
 	public void setSales(int sales) {
@@ -90,5 +90,9 @@ public class sale {
 
 	public String toString2() {
 		return String.format("%4s %4s %4s %4s %4s %5s %5s", cusNo.getCusNo(),date, product.getProduct(),product.getProName(), saleRate,product.getProPrice(),sales,profit);
+	}
+	
+	public String toString3() {
+		return String.format("%4s %4s %4s %4s %4s %5s %5s %s", date,product.getProduct(),product.getProName(),cusNo.getCusName(),saleRate,product.getProPrice(),sales,profit);
 	}
 }

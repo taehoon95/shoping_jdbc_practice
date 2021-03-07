@@ -1,14 +1,11 @@
-package shoping_jdbcDao;
-
-import static org.junit.Assert.fail;
+package shoping_jdbcDaoImpl;
 
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-
-import shoping_jdbcDaoImpl.saleDaoImpl;
+import shoping_jdbcDao.saleDao;
 import shoping_jdbcDto.sale;
 
 public class saleDaoTest {
@@ -20,8 +17,7 @@ public class saleDaoTest {
 		List<sale> list = dao.selectMain();
 		Assert.assertNotNull(list);
 		for(sale s : list) {
-			int i = 1;
-			System.out.printf("%d %s%n",i,s);
+			System.out.printf("%s%n",s);
 		}
 	}
 
@@ -37,7 +33,12 @@ public class saleDaoTest {
 
 	@Test
 	public void testDetailInfo() {
-		fail("Not yet implemented");
+		System.out.println("testDetailInfo");
+		List<sale> list = dao.detailInfo();
+		Assert.assertNotNull(list);
+		for(sale s : list) {
+			System.out.println(s.toString3());
+		}
 	}
 
 }
